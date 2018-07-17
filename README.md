@@ -1,6 +1,7 @@
 # access-collective-web-app
 
-> An application that displays disability facilities around uwa
+> An application that displays disability facilities around uwa 
+eg turn this map into an interactive map (http://www.student.uwa.edu.au/__data/assets/pdf_file/0010/2902447/UWA-accessibility-map.pdf)
 
 ## Build Setup
 
