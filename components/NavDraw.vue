@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer :mini-variant.sync="miniVariant" v-model='drawer' fixed app>
+  <v-navigation-drawer :mini-variant.sync="miniVariant" v-model='$store.state.navDraw' fixed app>
 
   </v-navigation-drawer>
 </template>

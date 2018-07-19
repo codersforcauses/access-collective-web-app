@@ -22,12 +22,17 @@
       <v-card height="calc(100vh - 64px)" width="100vw">
          
         <gmap-map
-          :center="{lat:10, lng:10}"
-          :zoom="7"
+          :center="{lat:-31.980293, lng:115.817935}"
+          :zoom="17"
           map-type-id="terrain"
           style="width: 100%; height: 100%;"
         >
-      
+          <GmapMarker
+            :key="index"
+            v-for="(m, index) in accessibleMarkers"
+            :position="m.position"
+            :icon="m.icon"
+          />
         </gmap-map>
       </v-card>
   </v-layout>
@@ -36,7 +41,24 @@
 <script>
 
 export default {
-
+  data () {
+    let wheelChairIcon = '/wheel-chair-icon.gif'
+    let publicTransIcon =  '/public-transport-icon.gif'
+    let toiletIcon = '/toilet-icon.gif'
+    let accessibleRampsIcon = '/accessible-ramps-icon.gif'
+    let liftIcon = '/lift-icon.gif'
+    return {
+      accessibleMarkers: [
+        {
+          icon: wheelChairIcon,
+          position: {
+            lat: -31.980293,
+            lng:115.817935
+          }
+        }
+      ]
+    }
+  }
 }
 </script>
 
