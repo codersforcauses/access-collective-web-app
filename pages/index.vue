@@ -13,23 +13,27 @@
     </v-toolbar>
     <v-card height="calc(100vh - 64px)" width="100vw">
 
-      <gmap-map :center="{lat:-31.980293, lng:115.817935}" :zoom="17" map-type-id="terrain" style="width: 100%; height: 100%;">
-        <GmapMarker :key="index" v-for="(m, index) in accessibleMarkers" :position="m.position" :icon="m.icon" />
+      <gmap-map ref="mapRef" :center="{lat:-31.980293, lng:115.817935}" :zoom="17" style="width: 100%; height: 100%;">
+        <GmapMarker 
+          :key="index" 
+          v-for="(m, index) in accessibleMarkers" 
+          :position="m.position" 
+          :icon="m.icon"
+          @click="navigateHere(m)"
+        />
 
-        <GmapMarker :position="currentLocation" icon="/person-pin.svg">
+        <GmapMarker :position="currentLocation" icon="/person-pin.svg"> 
           <gmap-info-window>
             <span class='black--text'>You are here</span>"
           </gmap-info-window>
         </GmapMarker>
-
-
-
       </gmap-map>
     </v-card>
   </v-layout>
 </template>
 
 <script>
+import { gmapApi } from '~/node_modules/vue2-google-maps'
   export default {
     mounted() {
       this.geolocation()
@@ -53,8 +57,14 @@
           lat: 0,
           lng: 0
         },
-        currentLocationText: 'You are here'
+        currentLocationText: 'You are here',
+        directionsService: '',
+        directionsDisplay: ''
       }
+    },
+
+    computed: {
+      google: gmapApi,
     },
 
     methods: {
@@ -63,6 +73,31 @@
           this.currentLocation.lat = position.coords.latitude
           this.currentLocation.lng = position.coords.longitude
         })
+      },
+
+      setGoogleDirections: function () {
+        this.directionsService = new this.google.maps.DirectionsService
+        this.directionsDisplay = new this.google.maps.DirectionsRenderer
+        this.$refs.mapRef.$mapPromise.then(map => {
+          this.directionsDisplay.setMap(map)
+        })
+      },
+
+      navigateHere: function (marker) {
+        this.setGoogleDirections()
+
+        this.directionsService.route({
+          origin: this.currentLocation,
+          destination: marker.position,
+          travelMode: 'WALKING'
+        }, (res, status) => {
+           if (status === 'OK') {
+            this.directionsDisplay.setDirections(res);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        })
+
       }
     }
   }

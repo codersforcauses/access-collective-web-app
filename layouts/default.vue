@@ -3,9 +3,9 @@
     <nav-draw></nav-draw>
     <tool-bar></tool-bar>
     <v-content>
-      <v-container-fluid>
+      <v-container fluid="true">
         <nuxt />
-      </v-container-fluid>
+      </v-container>
     </v-content>
     <footer></footer>
   </v-app>
