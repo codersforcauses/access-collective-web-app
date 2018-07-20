@@ -23,6 +23,20 @@ $ npm start
 $ npm run generate
 ```
 
+## Work
+
+1. Create new issue or assign yourself to existing issue
+
+2. Pull the latest changes
+
+3. Create your branch
+
+4. Make your changes and commit
+
+5. Merge any changes from master into your branch and resolve the merge conflicts
+
+6. Make a pull request 
+
 ## Key tools to develop effectively in project
 * Code formatter for IDE e.g. prettier or beautify
 * Vetur for syntax highlighting and auto completion
