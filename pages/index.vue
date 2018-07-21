@@ -23,7 +23,7 @@
         />
 
         <GmapMarker :position="currentLocation" icon="/person-pin.svg"> 
-          <gmap-info-window>
+          <gmap-info-window :options="{disableAutoPan: true}">
             <span class='black--text'>You are here</span>"
           </gmap-info-window>
         </GmapMarker>
