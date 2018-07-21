@@ -37,6 +37,21 @@ $ npm run generate
 
 6. Make a pull request 
 
+## Deploying app
+### Heroku
+https://github.com/nuxt/docs/blob/master/en/faq/heroku-deployment.md
+
+live app: https://access-collective-web-app.herokuapp.com/
+### SPA
+Set mode to spa in nuxt config then run npm run build
+1. `npm -g surge`
+2. `cd dist`
+3. `surge`
+live app: https://cold-animal.surge.sh/
+### GH PAGES
+1. npm run generate:gh-pages
+2. 
+
 ## Key tools to develop effectively in project
 * Code formatter for IDE e.g. prettier or beautify
 * Vetur for syntax highlighting and auto completion

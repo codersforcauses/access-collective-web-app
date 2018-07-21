@@ -2,8 +2,16 @@ const pkg = require('./package')
 
 const nodeExternals = require('webpack-node-externals')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/<repository-name>/'
+  }
+} : {}
+
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
+
+  ...routerBase,
 
   /*
   ** Headers of the page
