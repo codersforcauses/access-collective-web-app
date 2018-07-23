@@ -1319,7 +1319,7 @@ import { gmapApi } from '~/node_modules/vue2-google-maps'
             lat: -31.979811,
             lng: 115.820788
           }
-        },
+        }
         ],
         currentLocation: {
           lat: 0,
