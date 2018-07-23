@@ -37,6 +37,10 @@ import { gmapApi } from '~/node_modules/vue2-google-maps'
   export default {
     mounted() {
       this.geolocation()
+      navigator.geolocation.watchPosition((position) => {
+        this.currentLocation.lat = position.coords.latitude
+        this.currentLocation.lng = position.coords.longitude
+      })
     },
 
     data() {
