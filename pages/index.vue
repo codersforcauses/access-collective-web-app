@@ -29,13 +29,20 @@
         </GmapMarker>
       </gmap-map>
 
-      <v-speed-dial>
+      <v-speed-dial
+        :fixed='true'
+        class='dial'
+        :top='true'
+        :right='true'
+        direction='bottom'
+      >
         <v-btn
           slot="activator"
-          v-model="fab"
+          v-model="showSettings"
           color="blue darken-2"
           dark
           fab
+          @click='showSettings = !showSettings'
         >
           <v-icon>settings</v-icon>
           <v-icon>close</v-icon>
@@ -46,6 +53,14 @@
             <img src="/ACORD-parking.svg" alt="ACORD parking">
           </v-avatar>
         </v-btn>
+         <v-btn
+            fab
+            dark
+            small
+            color="green"
+          >
+            <v-icon>edit</v-icon>
+          </v-btn>
       </v-speed-dial>
     </v-card>
   </v-layout>
@@ -69,6 +84,7 @@ import { gmapApi } from '~/node_modules/vue2-google-maps'
       let accessibleRampsIcon = '/accessible-ramps-icon.gif'
       let liftIcon = '/lift-icon.png'
       return {
+        showSettings: true,
         accessibleMarkers: [{
           icon: wheelChairIcon,
           position: {
@@ -1403,4 +1419,8 @@ import { gmapApi } from '~/node_modules/vue2-google-maps'
     z-index: 9999;
   }
 
+  .dial {
+    z-index: 9999;
+    margin-top: 40px;
+  }
 </style>
