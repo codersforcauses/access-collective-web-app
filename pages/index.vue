@@ -28,6 +28,25 @@
           </gmap-info-window>
         </GmapMarker>
       </gmap-map>
+
+      <v-speed-dial>
+        <v-btn
+          slot="activator"
+          v-model="fab"
+          color="blue darken-2"
+          dark
+          fab
+        >
+          <v-icon>settings</v-icon>
+          <v-icon>close</v-icon>
+            
+        </v-btn>
+        <v-btn icon>
+          <v-avatar>
+            <img src="/ACORD-parking.svg" alt="ACORD parking">
+          </v-avatar>
+        </v-btn>
+      </v-speed-dial>
     </v-card>
   </v-layout>
 </template>
