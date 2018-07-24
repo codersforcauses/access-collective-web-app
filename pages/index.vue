@@ -13,7 +13,7 @@
     </v-toolbar>
     <v-card height="calc(100vh - 64px)" width="100vw">
 
-      <gmap-map ref="mapRef" :center="{lat:-31.980293, lng:115.817935}" :zoom="17" style="width: 100%; height: 100%;">
+      <gmap-map ref="mapRef" :center="{lat:-31.980293, lng:115.817935}" :zoom="18" style="width: 100%; height: 100%;">
         <GmapMarker 
           :key="index" 
           v-for="(m, index) in accessibleMarkers" 
@@ -44,7 +44,7 @@ import { gmapApi } from '~/node_modules/vue2-google-maps'
     },
 
     data() {
-      let wheelChairIcon = '/wheel-chair-icon.gif'
+      let wheelChairIcon = '/ACORD-parking.svg'
       let publicTransIcon = '/public-transport-icon.gif'
       let toiletIcon = '/toilet-icon.png'
       let accessibleRampsIcon = '/accessible-ramps-icon.gif'
