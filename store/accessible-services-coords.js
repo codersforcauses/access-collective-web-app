@@ -5,13 +5,15 @@ let accessibleRampsIcon = '/accessible-ramps-icon.gif'
 let liftIcon = '/lift-icon.png'
 
 module.exports = [{
-    icon: accordParkingIcon,
+  type: 'accordParking',  
+  icon: accordParkingIcon,
     position: {
       lat: -31.979260,
       lng: 115.819016
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.978917,
@@ -19,6 +21,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.978812,
@@ -26,6 +29,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.977520,
@@ -33,6 +37,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.978948,
@@ -40,6 +45,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976296,
@@ -47,6 +53,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976823,
@@ -54,6 +61,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.975957,
@@ -61,6 +69,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976916,
@@ -68,6 +77,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.977166,
@@ -75,6 +85,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.977371,
@@ -82,6 +93,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.977498,
@@ -89,6 +101,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.978028,
@@ -96,6 +109,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.978210,
@@ -103,6 +117,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.979764,
@@ -110,6 +125,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.979905,
@@ -117,6 +133,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.979787,
@@ -124,6 +141,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.980638,
@@ -131,6 +149,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.982317,
@@ -138,6 +157,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.981355,
@@ -145,6 +165,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.982692,
@@ -152,6 +173,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.982941,
@@ -159,6 +181,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.985609,
@@ -166,6 +189,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.986231,
@@ -173,6 +197,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.986237,
@@ -180,6 +205,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.985176,
@@ -187,6 +213,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.983634,
@@ -194,6 +221,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.979764,
@@ -201,6 +229,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.977303,
@@ -208,6 +237,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.981102,
@@ -215,6 +245,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976201,
@@ -222,6 +253,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976224,
@@ -229,6 +261,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976142,
@@ -236,6 +269,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.976167,
@@ -243,6 +277,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.973287,
@@ -250,6 +285,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.970111,
@@ -257,6 +293,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.969757,
@@ -264,6 +301,7 @@ module.exports = [{
     }
   },
   {
+    type: 'accordParking',
     icon: accordParkingIcon,
     position: {
       lat: -31.970323,
@@ -271,6 +309,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.979630,
@@ -278,6 +317,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.986073,
@@ -285,6 +325,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.985436,
@@ -292,6 +333,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.985196,
@@ -299,6 +341,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.985202,
@@ -306,6 +349,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.983558,
@@ -313,6 +357,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.983835,
@@ -320,6 +365,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.983012,
@@ -327,6 +373,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.982160,
@@ -334,6 +381,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.982082,
@@ -341,6 +389,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.982253,
@@ -348,6 +397,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.980403,
@@ -355,6 +405,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.979756,
@@ -362,6 +413,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.981902,
@@ -369,6 +421,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.981629,
@@ -376,6 +429,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.981213,
@@ -383,6 +437,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.980497,
@@ -390,6 +445,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.980007,
@@ -397,6 +453,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.978867,
@@ -404,6 +461,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.978486,
@@ -411,6 +469,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.978304,
@@ -418,6 +477,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.978920,
@@ -425,6 +485,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.979089,
@@ -432,6 +493,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.979179,
@@ -439,6 +501,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.978624,
@@ -446,6 +509,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.977907,
@@ -453,6 +517,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.978056,
@@ -460,6 +525,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.977049,
@@ -467,6 +533,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.977062,
@@ -474,6 +541,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.977423,
@@ -481,6 +549,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.976153,
@@ -488,6 +557,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.976453,
@@ -495,6 +565,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.977786,
@@ -502,6 +573,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.976724,
@@ -509,6 +581,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.976800,
@@ -516,6 +589,7 @@ module.exports = [{
     }
   },
   {
+    type: 'lift',
     icon: liftIcon,
     position: {
       lat: -31.976535,
@@ -523,6 +597,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.985609,
@@ -530,6 +605,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.986009,
@@ -537,6 +613,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.985222,
@@ -544,6 +621,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.985113,
@@ -551,6 +629,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.984949,
@@ -558,6 +637,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.983843,
@@ -565,6 +645,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.983690,
@@ -572,6 +653,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.983227,
@@ -579,6 +661,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.983052,
@@ -586,6 +669,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.982667,
@@ -593,6 +677,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.982260,
@@ -600,6 +685,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.982091,
@@ -607,6 +693,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.982085,
@@ -614,6 +701,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.982258,
@@ -621,6 +709,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.982251,
@@ -628,6 +717,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981625,
@@ -635,6 +725,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981516,
@@ -642,6 +733,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981420,
@@ -649,6 +741,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981155,
@@ -656,6 +749,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981675,
@@ -663,6 +757,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981476,
@@ -670,6 +765,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.981165,
@@ -677,6 +773,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.980565,
@@ -684,6 +781,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.980274,
@@ -691,6 +789,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.980092,
@@ -698,6 +797,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.980108,
@@ -705,6 +805,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979837,
@@ -712,6 +813,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979682,
@@ -719,6 +821,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979612,
@@ -726,6 +829,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979370,
@@ -733,6 +837,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979385,
@@ -740,6 +845,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979147,
@@ -747,6 +853,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.979205,
@@ -754,6 +861,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978843,
@@ -761,6 +869,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978598,
@@ -768,6 +877,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978651,
@@ -775,6 +885,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978356,
@@ -782,6 +893,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978350,
@@ -789,6 +901,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978833,
@@ -796,6 +909,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978757,
@@ -803,6 +917,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.978326,
@@ -810,6 +925,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977944,
@@ -817,6 +933,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977865,
@@ -824,6 +941,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977860,
@@ -831,6 +949,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977570,
@@ -838,6 +957,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977739,
@@ -845,6 +965,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977374,
@@ -852,6 +973,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977142,
@@ -859,6 +981,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976956,
@@ -866,6 +989,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977046,
@@ -873,6 +997,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976842,
@@ -880,6 +1005,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.977080,
@@ -887,6 +1013,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976504,
@@ -894,6 +1021,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976418,
@@ -901,6 +1029,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976841,
@@ -908,6 +1037,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976576,
@@ -915,6 +1045,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976377,
@@ -922,6 +1053,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976149,
@@ -929,6 +1061,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976331,
@@ -936,6 +1069,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976863,
@@ -943,6 +1077,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976429,
@@ -950,6 +1085,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976366,
@@ -957,6 +1093,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976684,
@@ -964,6 +1101,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976924,
@@ -971,6 +1109,7 @@ module.exports = [{
     }
   },
   {
+    type: 'ramps',
     icon: accessibleRampsIcon,
     position: {
       lat: -31.976629,
@@ -978,6 +1117,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.986081,
@@ -985,6 +1125,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.985475,
@@ -992,6 +1133,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.985791,
@@ -999,6 +1141,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.984936,
@@ -1006,6 +1149,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.983552,
@@ -1013,6 +1157,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.982983,
@@ -1020,6 +1165,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.982795,
@@ -1027,6 +1173,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.982118,
@@ -1034,6 +1181,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.982251,
@@ -1041,6 +1189,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.982134,
@@ -1048,6 +1197,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.981237,
@@ -1055,6 +1205,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.981261,
@@ -1062,6 +1213,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.981490,
@@ -1069,6 +1221,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.981639,
@@ -1076,6 +1229,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.981129,
@@ -1083,6 +1237,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.980513,
@@ -1090,6 +1245,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.980142,
@@ -1097,6 +1253,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.979834,
@@ -1104,6 +1261,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.979782,
@@ -1111,6 +1269,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.979466,
@@ -1118,6 +1277,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.979164,
@@ -1125,6 +1285,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.978681,
@@ -1132,6 +1293,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.978774,
@@ -1139,6 +1301,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.978493,
@@ -1146,6 +1309,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977929,
@@ -1153,6 +1317,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977775,
@@ -1160,6 +1325,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977810,
@@ -1167,6 +1333,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977022,
@@ -1174,6 +1341,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976564,
@@ -1181,6 +1349,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977051,
@@ -1188,6 +1357,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976143,
@@ -1195,6 +1365,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976529,
@@ -1202,6 +1373,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976944,
@@ -1209,6 +1381,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977144,
@@ -1216,6 +1389,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976657,
@@ -1223,6 +1397,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976433,
@@ -1230,6 +1405,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976542,
@@ -1237,6 +1413,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976806,
@@ -1244,6 +1421,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.977068,
@@ -1251,6 +1429,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.976538,
@@ -1258,6 +1437,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.970115,
@@ -1265,6 +1445,7 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.969717,
@@ -1272,10 +1453,11 @@ module.exports = [{
     }
   },
   {
+    type: 'toilets',
     icon: toiletIcon,
     position: {
       lat: -31.979811,
       lng: 115.820788
     }
   }
-  ]
+]

@@ -11,52 +11,36 @@
         <v-icon>more_vert</v-icon>
       </v-btn>
     </v-toolbar>
+    <SettingsDialog />
     <v-card height="calc(100vh - 64px)" width="100vw">
 
       <Map />
-
-      <v-speed-dial
-        :fixed='true'
-        class='dial'
-        :top='true'
-        :right='true'
-        direction='bottom'
+      <v-btn
+        :fixed="true"
+        class="settings-btn"
+        :top="true"
+        :right="true"
+        color="blue darken-2"
+        dark
+        fab
+        @click="$store.commit('showSettingsDialog')"
       >
-        <v-btn
-          slot="activator"
-          v-model="showSettings"
-          color="blue darken-2"
-          dark
-          fab
-          @click='showSettings = !showSettings'
-        >
-          <v-icon>settings</v-icon>
-          <v-icon>close</v-icon>
-            
-        </v-btn>
-        <v-btn icon>
-          <v-avatar>
-            <img src="/ACORD-parking.svg" alt="ACORD parking">
-          </v-avatar>
-        </v-btn>
-         <v-btn
-            fab
-            dark
-            small
-            color="green"
-          >
-            <v-icon>edit</v-icon>
-          </v-btn>
-      </v-speed-dial>
+        <v-icon>settings</v-icon>
+      </v-btn>
+
+      
     </v-card>
   </v-layout>
 </template>
 
 <script>
 import Map from '@/components/Map'
+import SettingsDialog from '@/components/SettingsDialog'
+
   export default {
     components: {
-      Map
+      Map,
+      SettingsDialog
     },
     data () {
       return {
@@ -68,7 +52,7 @@ import Map from '@/components/Map'
 </script>
 
 <style scoped>
-  .dial {
+  .settings-btn {
     z-index: 9999;
     margin-top: 40px;
   }

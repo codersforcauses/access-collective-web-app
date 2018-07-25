@@ -6,6 +6,7 @@
           :position="m.position" 
           :icon="m.icon"
           @click="navigateHere(m)"
+          v-if="showAccessibleMarkers.includes(m.type)"
         />
 
         <GmapMarker :position="currentLocation" icon="/person-pin.svg"> 
@@ -42,6 +43,9 @@ export default {
 
     computed: {
       google: gmapApi,
+      showAccessibleMarkers () {
+        return this.$store.getters.showAccessibleMarkers
+      }
     },
 
     methods: {
