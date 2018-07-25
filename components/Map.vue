@@ -1,5 +1,5 @@
 <template>
-     <gmap-map ref="mapRef" :center="{lat:-31.980293, lng:115.817935}" :zoom="18" style="width: 100%; height: 100%;">
+     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
         <GmapMarker 
           :key="index" 
           v-for="(m, index) in $store.state.accessibleServicesCoords" 
@@ -9,10 +9,8 @@
           v-if="showAccessibleMarkers.includes(m.type)"
         />
 
-        <GmapMarker :position="currentLocation" icon="/person-pin.svg"> 
-          <gmap-info-window :options="{disableAutoPan: true}">
-            <span class='black--text'>You are here</span>"
-          </gmap-info-window>
+        <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
+          
         </GmapMarker>
       </gmap-map>
 </template>
@@ -35,7 +33,6 @@ export default {
           lat: 0,
           lng: 0
         },
-        currentLocationText: 'You are here',
         directionsService: '',
         directionsDisplay: ''
       }
@@ -45,6 +42,13 @@ export default {
       google: gmapApi,
       showAccessibleMarkers () {
         return this.$store.getters.showAccessibleMarkers
+      },
+      center () {
+        if (this.currentLocation.lat !== 0) {
+          return this.currentLocation
+        } else {
+          return {lat:-31.980293, lng:115.817935}
+        }
       }
     },
 
