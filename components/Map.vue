@@ -13,7 +13,17 @@
       <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
       </GmapMarker>
     </gmap-map>
-    <div id="legend"><h3>Legend</h3></div>
+    <v-btn
+      :fixed="true"
+      :bottom="true"
+      :right="true"
+      class="legend-btn"
+      @click="legend = !legend"
+      style="margin-bottom: 100px;"
+    >
+      Legend
+    </v-btn>
+    <div id="legend" v-show="legend"></div>
     </span>
 </template>
 
@@ -30,7 +40,7 @@ export default {
 
       const icons = [
         {
-          name: 'Accessible Ramp',
+          name: 'ACORD Parking',
           icon: '/ACORD-parking.svg'
         },
         {
@@ -64,7 +74,8 @@ export default {
           lng: 0
         },
         directionsService: '',
-        directionsDisplay: ''
+        directionsDisplay: '',
+        legend: false
       }
     },
 
