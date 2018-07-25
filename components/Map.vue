@@ -1,18 +1,20 @@
 <template>
-     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
-        <GmapMarker 
-          :key="index" 
-          v-for="(m, index) in $store.state.accessibleServicesCoords" 
-          :position="m.position" 
-          :icon="m.icon"
-          @click="navigateHere(m)"
-          v-if="showAccessibleMarkers.includes(m.type)"
-        />
+<span>
+    <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
+      <GmapMarker 
+        :key="index" 
+        v-for="(m, index) in $store.state.accessibleServicesCoords" 
+        :position="m.position" 
+        :icon="m.icon"
+        @click="navigateHere(m)"
+        v-if="showAccessibleMarkers.includes(m.type)"
+      />
 
-        <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
-          
-        </GmapMarker>
-      </gmap-map>
+      <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
+      </GmapMarker>
+    </gmap-map>
+    <div id="legend"><h3>Legend</h3></div>
+    </span>
 </template>
 
 <script>
@@ -24,6 +26,34 @@ export default {
       navigator.geolocation.watchPosition((position) => {
         this.currentLocation.lat = position.coords.latitude
         this.currentLocation.lng = position.coords.longitude
+      })
+
+      const icons = [
+        {
+          name: 'Accessible Ramp',
+          icon: '/ACORD-parking.svg'
+        },
+        {
+          name: 'Universal Access Toilets',
+          icon: '/toilet-icon.png'
+        },
+        {
+          name: 'Accessible Ramps',
+          icon: '/accessible-ramps-icon.gif'
+        },
+        {
+          name: 'Lift',
+          icon: '/lift-icon.png'
+        }
+      ]
+      var legend = document.getElementById('legend');
+      for (let i = 0; i < icons.length; i++) {
+        var div = document.createElement('div');
+        div.innerHTML = '<img src="' + icons[i].icon + '"> ' + '<span class="black--text">' + icons[i].name + '</span>';
+        legend.appendChild(div);
+      }
+      this.$refs.mapRef.$mapPromise.then(map => {
+        map.controls[this.google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
       })
     },
 
@@ -89,5 +119,20 @@ export default {
 </script>
 
 <style scoped>
-
+ #legend {
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #000;
+}
+#legend h3 {
+  margin-top: 0;
+  color: black;
+}
+#legend img {
+  vertical-align: middle;
+}
+#lengend > div {
+  color: black;
+}
 </style>
