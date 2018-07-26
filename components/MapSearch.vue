@@ -1,8 +1,8 @@
 <template>
 	<v-toolbar dense class='search-bar'>
+		<input type="text" id="map-search">
 		<gmap-autocomplete 
 			@place_changed="setPlace" 
-			id="map-search" 
 			:componentRestrictions="{country: 'AU', postcode: 6009}">
 
 		</gmap-autocomplete>

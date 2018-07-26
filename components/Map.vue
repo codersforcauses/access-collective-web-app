@@ -1,7 +1,22 @@
 <template>
 <span>
-      <MapSearch :map-ref="gMap"/>        
-  
+    <v-toolbar dense class='search-bar'>
+		  <gmap-autocomplete 
+        @place_changed="setPlace"
+        :bounds="{north: -31.969972, east: 115.821395, south: -31.993956, west: 115.807834}"
+        id="map-search"
+      >
+		  </gmap-autocomplete>
+			<v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>my_location</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>settings</v-icon>
+      </v-btn>
+    </v-toolbar>
+
     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
       <GmapMarker 
         :key="index" 
@@ -14,6 +29,8 @@
 
       <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
       </GmapMarker>
+
+      <GmapMarker  v-if="place" :position="{lat: place.geometry.location.lat(), lng: place.geometry.location.lng()}" :animation="google.maps.Animation.DROP"/>
     </gmap-map>
     <v-btn
       :fixed="true"
@@ -83,7 +100,8 @@ export default {
         directionsService: '',
         directionsDisplay: '',
         legend: false,
-        gMap: null
+        gMap: null,
+        place: null
       }
     },
 
@@ -93,7 +111,9 @@ export default {
         return this.$store.getters.showAccessibleMarkers
       },
       center () {
-        if (this.currentLocation.lat !== 0) {
+        if (this.place) {
+          return { lat: this.place.geometry.location.lat(), lng: this.place.geometry.location.lng()}
+        } else if (this.currentLocation.lat !== 0) {
           return this.currentLocation
         } else {
           return {lat:-31.980293, lng:115.817935}
@@ -132,6 +152,10 @@ export default {
           }
         })
 
+      },
+
+      setPlace: function (place) {
+        this.place = place
       }
     }
 }
@@ -153,5 +177,16 @@ export default {
 }
 #lengend > div {
   color: black;
+}
+.search-bar {
+  position: fixed;
+  left: 10px;
+  top: 100px;
+  z-index: 100;
+  width: 95%
+}
+
+#map-search {
+  width: 100%
 }
 </style>

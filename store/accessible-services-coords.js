@@ -1,5 +1,4 @@
 let accordParkingIcon = '/ACORD-parking.svg'
-let publicTransIcon = '/public-transport-icon.gif'
 let toiletIcon = '/toilet-icon.png'
 let accessibleRampsIcon = '/accessible-ramps-icon.gif'
 let liftIcon = '/lift-icon.png'
