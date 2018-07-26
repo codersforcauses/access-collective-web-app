@@ -12,12 +12,14 @@
         <v-icon>my_location</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn icon
+        @click="$store.commit('showSettingsDialog')"
+      >
         <v-icon>settings</v-icon>
       </v-btn>
     </v-toolbar>
 
-    <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
+    <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;" :options="{styles: styles}">
       <GmapMarker 
         :key="index" 
         v-for="(m, index) in $store.state.accessibleServicesCoords" 
@@ -72,7 +74,7 @@ export default {
         },
         {
           name: 'Accessible Ramps',
-          icon: '/accessible-ramps-icon.gif'
+          icon: '/accessible-ramps2.svg'
         },
         {
           name: 'Lift',
@@ -101,7 +103,99 @@ export default {
         directionsDisplay: '',
         legend: false,
         gMap: null,
-        place: null
+        place: null,
+        styles: [
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#C33361"
+            },
+            {
+                "saturation": 43.400000000000006
+            },
+            {
+                "lightness": 37.599999999999994
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#C33361"
+            },
+            {
+                "saturation": -61.8
+            },
+            {
+                "lightness": 45.599999999999994
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#C33361"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 51.19999999999999
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#C33361"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 52
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#0078FF"
+            },
+            {
+                "saturation": -13.200000000000003
+            },
+            {
+                "lightness": 2.4000000000000057
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    }
+]
       }
     },
 
@@ -174,9 +268,6 @@ export default {
 }
 #legend img {
   vertical-align: middle;
-}
-#lengend > div {
-  color: black;
 }
 .search-bar {
   position: fixed;

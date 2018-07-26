@@ -4,19 +4,6 @@
     <v-card height="calc(100vh - 64px)" width="100vw">
 
       <Map />
-      <v-btn
-        :fixed="true"
-        class="settings-btn"
-        :top="true"
-        :right="true"
-        color="blue darken-2"
-        dark
-        fab
-        @click="$store.commit('showSettingsDialog')"
-      >
-        <v-icon>settings</v-icon>
-      </v-btn>
-
       
     </v-card>
     

@@ -1,6 +1,6 @@
 let accordParkingIcon = '/ACORD-parking.svg'
 let toiletIcon = '/toilet-icon.png'
-let accessibleRampsIcon = '/accessible-ramps-icon.gif'
+let accessibleRampsIcon = '/accessible-ramps2.svg'
 let liftIcon = '/lift-icon.png'
 
 module.exports = [{
