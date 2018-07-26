@@ -1,5 +1,7 @@
 <template>
 <span>
+      <MapSearch :map-ref="gMap"/>        
+  
     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
       <GmapMarker 
         :key="index" 
@@ -29,9 +31,13 @@
 
 <script>
 import { gmapApi } from '~/node_modules/vue2-google-maps'
+import MapSearch from '@/components/MapSearch'
 
 export default {
-     mounted() {
+    components: {
+      MapSearch
+    },
+    mounted() {
       this.geolocation()
       navigator.geolocation.watchPosition((position) => {
         this.currentLocation.lat = position.coords.latitude
@@ -63,6 +69,7 @@ export default {
         legend.appendChild(div);
       }
       this.$refs.mapRef.$mapPromise.then(map => {
+        this.gMap = map
         map.controls[this.google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
       })
     },
@@ -75,7 +82,8 @@ export default {
         },
         directionsService: '',
         directionsDisplay: '',
-        legend: false
+        legend: false,
+        gMap: null
       }
     },
 
