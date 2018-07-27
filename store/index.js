@@ -17,13 +17,7 @@ const createStore = () => {
     },
 
     getters: {
-      showAccessibleMarkers: state => {
-        let markers = []
-        for (const key of Object.keys(state.accessibleMarkers)) {
-          if (state.accessibleMarkers[key]) markers.push(key)
-        }
-        return markers
-      }
+
     },
 
     mutations: {

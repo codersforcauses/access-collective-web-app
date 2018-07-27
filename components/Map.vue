@@ -22,12 +22,40 @@
     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;" :options="{styles: styles}">
       <GmapMarker 
         :key="index" 
-        v-for="(m, index) in $store.state.accessibleServicesCoords" 
+        v-for="(m, index) in $store.state.accessibleServicesCoords.accordParking" 
         :position="m.position" 
         :icon="m.icon"
         @click="navigateHere(m)"
-        v-if="showAccessibleMarkers.includes(m.type)"
+        v-if="$store.state.accessibleMarkers.accordParking"
       />
+
+      <GmapMarker 
+        :key="index" 
+        v-for="(m, index) in $store.state.accessibleServicesCoords.lift" 
+        :position="m.position" 
+        :icon="m.icon"
+        @click="navigateHere(m)"
+        v-if="$store.state.accessibleMarkers.lift"
+      />
+
+      <GmapMarker 
+        :key="index" 
+        v-for="(m, index) in $store.state.accessibleServicesCoords.ramps" 
+        :position="m.position" 
+        :icon="m.icon"
+        @click="navigateHere(m)"
+        v-if="$store.state.accessibleMarkers.ramps"
+      />
+
+      <GmapMarker 
+        :key="index" 
+        v-for="(m, index) in $store.state.accessibleServicesCoords.toilets" 
+        :position="m.position" 
+        :icon="m.icon"
+        @click="navigateHere(m)"
+        v-if="$store.state.accessibleMarkers.toilets"
+      />
+
 
       <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
       </GmapMarker>
@@ -201,9 +229,6 @@ export default {
 
     computed: {
       google: gmapApi,
-      showAccessibleMarkers () {
-        return this.$store.getters.showAccessibleMarkers
-      },
       center () {
         if (this.place) {
           return { lat: this.place.geometry.location.lat(), lng: this.place.geometry.location.lng()}
