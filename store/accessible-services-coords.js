@@ -1,7 +1,7 @@
-let accordParkingIcon = '/ACORD-parking.svg'
-let toiletIcon = '/toilet-icon.png'
-let accessibleRampsIcon = '/accessible-ramps2.svg'
-let liftIcon = '/lift-icon.png'
+let accordParkingIcon = require('~/assets/ACORD-parking.svg')
+let toiletIcon = require('~/assets/toilet-icon.png')
+let accessibleRampsIcon = require('~/assets/accessible-ramps2.svg')
+let liftIcon = require('~/assets/lift-icon.png')
 
 module.exports = {
   accordParking: [{ 

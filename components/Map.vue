@@ -8,7 +8,7 @@
       >
 		  </gmap-autocomplete>
 			<v-spacer></v-spacer>
-      <v-btn icon>
+      <v-btn icon @click="geolocation">
         <v-icon>my_location</v-icon>
       </v-btn>
 
@@ -70,7 +70,7 @@
       
 
 
-      <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
+      <GmapMarker :position="currentLocation" :icon="require('~/assets/my-location.svg')"> 
       </GmapMarker>
 
       <GmapMarker  v-if="place" :position="{lat: place.geometry.location.lat(), lng: place.geometry.location.lng()}" :animation="google.maps.Animation.DROP"/>
