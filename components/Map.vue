@@ -1,6 +1,6 @@
 <template>
 <span>
-    <v-toolbar dense class='search-bar'>
+    <v-toolbar dense class='search-bar' color="primary">
 		  <gmap-autocomplete 
         @place_changed="setPlace"
         :bounds="{north: -31.969972, east: 115.821395, south: -31.993956, west: 115.807834}"
@@ -79,7 +79,7 @@
       :fixed="true"
       :bottom="true"
       :right="true"
-      class="legend-btn"
+      class="legend-btn primary"
       @click="legend = !legend"
       style="margin-bottom: 100px;"
     >
@@ -91,12 +91,10 @@
 
 <script>
 import { gmapApi } from '~/node_modules/vue2-google-maps'
-import MapSearch from '@/components/MapSearch'
 import GmapCluster from '~/node_modules/vue2-google-maps/dist/components/cluster' 
 
 export default {
     components: {
-      MapSearch,
       GmapCluster
     },
     mounted() {
@@ -318,11 +316,28 @@ export default {
   position: fixed;
   left: 10px;
   top: 100px;
-  z-index: 100;
+  z-index: 2;
   width: 95%
 }
 
 #map-search {
   width: 100%
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: pink;
+}
+
+input:focus{
+  outline: none;
 }
 </style>

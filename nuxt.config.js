@@ -4,7 +4,7 @@ const nodeExternals = require('webpack-node-externals')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/<repository-name>/'
+    base: '/access-collective-web-app/'
   }
 } : {}
 

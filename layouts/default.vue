@@ -3,7 +3,7 @@
     <nav-draw></nav-draw>
     <tool-bar></tool-bar>
     <v-content>
-      <v-container fluid="true">
+      <v-container fluid="true" style="padding: 0;">
         <nuxt />
       </v-container>
     </v-content>
@@ -30,3 +30,7 @@ export default {
 }
 
 </script>
+
+<style>
+
+</style>

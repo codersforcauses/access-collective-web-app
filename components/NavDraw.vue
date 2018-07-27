@@ -1,6 +1,6 @@
 <template>
-  <v-navigation-drawer :mini-variant.sync="miniVariant" v-model='$store.state.navDraw' fixed app>
-     <v-toolbar flat>
+  <v-navigation-drawer :mini-variant.sync="mini" v-model='$store.state.navDraw' fixed app class="secondary">
+     <v-toolbar flat color="primary">
       <v-list>
         <v-list-tile>
           <v-list-tile-title class="title">
@@ -13,12 +13,45 @@
     <v-divider></v-divider>
 
     <v-list>
+      <v-list-tile to="/">
+        <v-list-tile-action>
+          <v-icon>home</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          Home
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+
+    <v-list>
+      <v-list-tile @click="$store.commit('showSettingsDialog')">
+        <v-list-tile-action>
+          <v-icon>settings</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          Settings
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+
+    <v-list>
       <v-list-tile to="/contact">
         <v-list-tile-action>
           <v-icon>question_answer</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           Contact Us
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+
+    <v-list>
+      <v-list-tile to="/about">
+        <v-list-tile-action>
+          <v-icon>people</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          About
         </v-list-tile-content>
       </v-list-tile>
     </v-list>
@@ -32,7 +65,17 @@
         drawer: false,
         miniVariant: false
       }
+    },
+
+    computed: {
+      mini () {
+        return this.$vuetify.breakpoint.name === 'xs'
+      }
     }
   }
 
 </script>
+
+<style>
+
+</style>
