@@ -20,41 +20,54 @@
     </v-toolbar>
 
     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;" :options="{styles: styles}">
-      <GmapMarker 
-        :key="index" 
-        v-for="(m, index) in $store.state.accessibleServicesCoords.accordParking" 
-        :position="m.position" 
-        :icon="m.icon"
-        @click="navigateHere(m)"
-        v-if="$store.state.accessibleMarkers.accordParking"
-      />
 
-      <GmapMarker 
-        :key="index" 
-        v-for="(m, index) in $store.state.accessibleServicesCoords.lift" 
-        :position="m.position" 
-        :icon="m.icon"
-        @click="navigateHere(m)"
-        v-if="$store.state.accessibleMarkers.lift"
-      />
+      <gmap-cluster>
+        <GmapMarker 
+          :key="index + 'parking'" 
+          v-for="(m, index) in $store.state.accessibleServicesCoords.accordParking" 
+          :position="m.position" 
+          :icon="m.icon"
+          @click="navigateHere(m)"
+          v-if="$store.state.accessibleMarkers.accordParking"
+        />
+      </gmap-cluster>
 
-      <GmapMarker 
-        :key="index" 
-        v-for="(m, index) in $store.state.accessibleServicesCoords.ramps" 
-        :position="m.position" 
-        :icon="m.icon"
-        @click="navigateHere(m)"
-        v-if="$store.state.accessibleMarkers.ramps"
-      />
 
-      <GmapMarker 
-        :key="index" 
-        v-for="(m, index) in $store.state.accessibleServicesCoords.toilets" 
-        :position="m.position" 
-        :icon="m.icon"
-        @click="navigateHere(m)"
-        v-if="$store.state.accessibleMarkers.toilets"
-      />
+      <gmap-cluster>
+        <GmapMarker 
+          :key="index + 'lift'" 
+          v-for="(m, index) in $store.state.accessibleServicesCoords.lift" 
+          :position="m.position" 
+          :icon="m.icon"
+          @click="navigateHere(m)"
+          v-if="$store.state.accessibleMarkers.lift"
+        />
+      </gmap-cluster>
+      
+
+      <gmap-cluster>
+        <GmapMarker 
+          :key="index + 'ramps'" 
+          v-for="(m, index) in $store.state.accessibleServicesCoords.ramps" 
+          :position="m.position" 
+          :icon="m.icon"
+          @click="navigateHere(m)"
+          v-if="$store.state.accessibleMarkers.ramps"
+        />
+      </gmap-cluster>
+     
+
+      <gmap-cluster>
+        <GmapMarker 
+          :key="index + 'toilets'" 
+          v-for="(m, index) in $store.state.accessibleServicesCoords.toilets" 
+          :position="m.position" 
+          :icon="m.icon"
+          @click="navigateHere(m)"
+          v-if="$store.state.accessibleMarkers.toilets"
+        />
+      </gmap-cluster>
+      
 
 
       <GmapMarker :position="currentLocation" icon="/my-location.svg"> 
@@ -79,14 +92,16 @@
 <script>
 import { gmapApi } from '~/node_modules/vue2-google-maps'
 import MapSearch from '@/components/MapSearch'
+import GmapCluster from '~/node_modules/vue2-google-maps/dist/components/cluster' 
 
 export default {
     components: {
-      MapSearch
+      MapSearch,
+      GmapCluster
     },
     mounted() {
       this.geolocation()
-      navigator.geolocation.watchPosition((position) => {
+      this.watchPositionId = navigator.geolocation.watchPosition((position) => {
         this.currentLocation.lat = position.coords.latitude
         this.currentLocation.lng = position.coords.longitude
       })
@@ -121,6 +136,10 @@ export default {
       })
     },
 
+    destroyed () {
+      navigator.geolocation.clearWatch(this.watchPositionId)
+    },
+
     data() {
       return {
         currentLocation: {
@@ -132,6 +151,7 @@ export default {
         legend: false,
         gMap: null,
         place: null,
+        watchPositionId: null,
         styles: [
     {
         "featureType": "landscape",
