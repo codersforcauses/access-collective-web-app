@@ -17,7 +17,7 @@
       </v-btn>
     </v-toolbar>
 
-    <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;">
+    <gmap-map ref="mapRef" :center="center" :zoom="19" :options="{styles: styles}" style="width: 100%; height: 100%;">
       <GmapMarker 
         :key="index" 
         v-for="(m, index) in $store.state.accessibleServicesCoords" 
@@ -47,122 +47,293 @@
 </template>
 
 <script>
-import { gmapApi } from '~/node_modules/vue2-google-maps'
-import MapSearch from '@/components/MapSearch'
+import { gmapApi } from "~/node_modules/vue2-google-maps";
+import MapSearch from "@/components/MapSearch";
 
 export default {
-    components: {
-      MapSearch
-    },
-    mounted() {
-      this.geolocation()
-      navigator.geolocation.watchPosition((position) => {
-        this.currentLocation.lat = position.coords.latitude
-        this.currentLocation.lng = position.coords.longitude
-      })
+  components: {
+    MapSearch
+  },
+  mounted() {
+    this.geolocation();
+    navigator.geolocation.watchPosition(position => {
+      this.currentLocation.lat = position.coords.latitude;
+      this.currentLocation.lng = position.coords.longitude;
+    });
 
-      const icons = [
+    const icons = [
+      {
+        name: "ACORD Parking",
+        icon: "/ACORD-parking.svg"
+      },
+      {
+        name: "Universal Access Toilets",
+        icon: "/toilet-icon.png"
+      },
+      {
+        name: "Accessible Ramps",
+        icon: "/accessible-ramps-icon.gif"
+      },
+      {
+        name: "Lift",
+        icon: "/lift-icon.png"
+      }
+    ];
+    var legend = document.getElementById("legend");
+    for (let i = 0; i < icons.length; i++) {
+      var div = document.createElement("div");
+      div.innerHTML =
+        '<img src="' +
+        icons[i].icon +
+        '"> ' +
+        '<span class="black--text">' +
+        icons[i].name +
+        "</span>";
+      legend.appendChild(div);
+    }
+    this.$refs.mapRef.$mapPromise.then(map => {
+      this.gMap = map;
+      map.controls[this.google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    });
+  },
+
+  data() {
+    return {
+      currentLocation: {
+        lat: 0,
+        lng: 0
+      },
+      directionsService: "",
+      directionsDisplay: "",
+      legend: false,
+      gMap: null,
+      place: null,
+      styles: [
         {
-          name: 'ACORD Parking',
-          icon: '/ACORD-parking.svg'
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#f5f5f5"
+            }
+          ]
         },
         {
-          name: 'Universal Access Toilets',
-          icon: '/toilet-icon.png'
+          elementType: "labels.icon",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
         },
         {
-          name: 'Accessible Ramps',
-          icon: '/accessible-ramps-icon.gif'
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#616161"
+            }
+          ]
         },
         {
-          name: 'Lift',
-          icon: '/lift-icon.png'
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              color: "#f5f5f5"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.land_parcel",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#bdbdbd"
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#eeeeee"
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#757575"
+            }
+          ]
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#e5e5e5"
+            }
+          ]
+        },
+        {
+          featureType: "poi.park",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#9e9e9e"
+            }
+          ]
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#ffffff"
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#757575"
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#dadada"
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#616161"
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#9e9e9e"
+            }
+          ]
+        },
+        {
+          featureType: "transit.line",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#e5e5e5"
+            }
+          ]
+        },
+        {
+          featureType: "transit.station",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#eeeeee"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#c9c9c9"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#9e9e9e"
+            }
+          ]
         }
       ]
-      var legend = document.getElementById('legend');
-      for (let i = 0; i < icons.length; i++) {
-        var div = document.createElement('div');
-        div.innerHTML = '<img src="' + icons[i].icon + '"> ' + '<span class="black--text">' + icons[i].name + '</span>';
-        legend.appendChild(div);
-      }
-      this.$refs.mapRef.$mapPromise.then(map => {
-        this.gMap = map
-        map.controls[this.google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-      })
+    };
+  },
+
+  computed: {
+    google: gmapApi,
+    showAccessibleMarkers() {
+      return this.$store.getters.showAccessibleMarkers;
     },
-
-    data() {
-      return {
-        currentLocation: {
-          lat: 0,
-          lng: 0
-        },
-        directionsService: '',
-        directionsDisplay: '',
-        legend: false,
-        gMap: null,
-        place: null
-      }
-    },
-
-    computed: {
-      google: gmapApi,
-      showAccessibleMarkers () {
-        return this.$store.getters.showAccessibleMarkers
-      },
-      center () {
-        if (this.place) {
-          return { lat: this.place.geometry.location.lat(), lng: this.place.geometry.location.lng()}
-        } else if (this.currentLocation.lat !== 0) {
-          return this.currentLocation
-        } else {
-          return {lat:-31.980293, lng:115.817935}
-        }
-      }
-    },
-
-    methods: {
-      geolocation: function () {
-        navigator.geolocation.getCurrentPosition(position => {
-          this.currentLocation.lat = position.coords.latitude
-          this.currentLocation.lng = position.coords.longitude
-        })
-      },
-
-      setGoogleDirections: function () {
-        this.directionsService = new this.google.maps.DirectionsService
-        this.directionsDisplay = new this.google.maps.DirectionsRenderer
-        this.$refs.mapRef.$mapPromise.then(map => {
-          this.directionsDisplay.setMap(map)
-        })
-      },
-
-      navigateHere: function (marker) {
-        this.setGoogleDirections()
-
-        this.directionsService.route({
-          origin: this.currentLocation,
-          destination: marker.position,
-          travelMode: 'WALKING'
-        }, (res, status) => {
-           if (status === 'OK') {
-            this.directionsDisplay.setDirections(res);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        })
-
-      },
-
-      setPlace: function (place) {
-        this.place = place
+    center() {
+      if (this.place) {
+        return {
+          lat: this.place.geometry.location.lat(),
+          lng: this.place.geometry.location.lng()
+        };
+      } else if (this.currentLocation.lat !== 0) {
+        return this.currentLocation;
+      } else {
+        return { lat: -31.980293, lng: 115.817935 };
       }
     }
-}
+  },
+
+  methods: {
+    geolocation: function() {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.currentLocation.lat = position.coords.latitude;
+        this.currentLocation.lng = position.coords.longitude;
+      });
+    },
+
+    setGoogleDirections: function() {
+      this.directionsService = new this.google.maps.DirectionsService();
+      this.directionsDisplay = new this.google.maps.DirectionsRenderer();
+      this.$refs.mapRef.$mapPromise.then(map => {
+        this.directionsDisplay.setMap(map);
+      });
+    },
+
+    navigateHere: function(marker) {
+      this.setGoogleDirections();
+
+      this.directionsService.route(
+        {
+          origin: this.currentLocation,
+          destination: marker.position,
+          travelMode: "WALKING"
+        },
+        (res, status) => {
+          if (status === "OK") {
+            this.directionsDisplay.setDirections(res);
+          } else {
+            window.alert("Directions request failed due to " + status);
+          }
+        }
+      );
+    },
+
+    setPlace: function(place) {
+      this.place = place;
+    }
+  }
+};
 </script>
 
 <style scoped>
- #legend {
+#legend {
   background: #fff;
   padding: 10px;
   margin: 10px;
@@ -183,10 +354,10 @@ export default {
   left: 10px;
   top: 100px;
   z-index: 100;
-  width: 95%
+  width: 95%;
 }
 
 #map-search {
-  width: 100%
+  width: 100%;
 }
 </style>
