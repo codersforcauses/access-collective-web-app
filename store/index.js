@@ -13,7 +13,12 @@ const createStore = () => {
         toilets: true,
 
       },
-      accessibleServicesCoords
+      accessibleServicesCoords,
+      alert: {
+        alert: false,
+        type: 'info',
+        message: null
+      }
     },
 
     getters: {
@@ -31,6 +36,16 @@ const createStore = () => {
 
       closeSettingsDialog (state) {
         state.settingsDialog = false
+      },
+
+      showAlert (state, payload) {
+        state.alert.alert = true
+        state.alert.type = payload.type
+        state.alert.message = payload.message
+      },
+
+      hideAlert(state) {
+        state.alert.alert = false
       }
     }
   })

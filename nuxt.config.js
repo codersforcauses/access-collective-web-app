@@ -67,7 +67,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue2-google-maps'],
+    vendor: ['vue2-google-maps', 'babel-polyfill'],
     /*
     ** You can extend webpack config here
     */

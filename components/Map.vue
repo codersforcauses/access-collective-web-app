@@ -102,24 +102,24 @@ export default {
       this.watchPositionId = navigator.geolocation.watchPosition((position) => {
         this.currentLocation.lat = position.coords.latitude
         this.currentLocation.lng = position.coords.longitude
-      })
+      }, this.handleGetGeoError)
 
       const icons = [
         {
           name: 'ACORD Parking',
-          icon: '/ACORD-parking.svg'
+          icon: require('~/assets/ACORD-parking.svg')
         },
         {
           name: 'Universal Access Toilets',
-          icon: '/toilet-icon.png'
+          icon: require('~/assets/toilet-icon.png')
         },
         {
           name: 'Accessible Ramps',
-          icon: '/accessible-ramps2.svg'
+          icon: require('~/assets/accessible-ramps2.svg')
         },
         {
           name: 'Lift',
-          icon: '/lift-icon.png'
+          icon: require('~/assets/lift-icon.png')
         }
       ]
       var legend = document.getElementById('legend');
@@ -293,6 +293,10 @@ export default {
 
       setPlace: function (place) {
         this.place = place
+      },
+
+      handleGetGeoError: function (error) {
+        this.$store.commit('showAlert', {type: 'error', message: 'Failed to retrieve your location because, ' + error.code})
       }
     }
 }
