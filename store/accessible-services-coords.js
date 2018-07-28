@@ -523,6 +523,13 @@ module.exports = [{
     }
   },
   {
+    icon: liftIcon,
+    position: {
+      lat: -31.980636, 
+      lng: 115.819570
+    }
+  },
+  {
     icon: accessibleRampsIcon,
     position: {
       lat: -31.985609,
