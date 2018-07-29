@@ -8,21 +8,21 @@
         <nuxt />
       </v-container>
     </v-content>
-    <footer></footer>
+    <my-footer></my-footer>
   </v-app>
 </template>
 
 <script>
 import ToolBar from '@/components/ToolBar'
 import NavDraw from '@/components/NavDraw'
-import Footer from '@/components/Footer'
+import MyFooter from '@/components/Footer'
 import Alert from '@/components/Alert'
 
 export default {
   components: {
     ToolBar,
     NavDraw,
-    Footer,
+    MyFooter,
     Alert
   },
   created () {
