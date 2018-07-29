@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/pwa": "^2.0.8",
     "nuxt": "^1.0.0",
     "vue2-google-maps": "^0.10.0",
     "vuetify": "^1.0.19"

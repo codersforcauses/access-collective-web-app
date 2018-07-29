@@ -255,7 +255,7 @@
 /*! ./VBtnToggle */
 
 /*!***************************************!*\
-  !*** ./src/components/VCard/VCard.js ***!
+  !*** ./src/components/VCard/VCard.ts ***!
   \***************************************/
 
 /*! exports provided: default */
@@ -270,22 +270,28 @@
 
 /*! ../../util/helpers */
 
+/*! ../../util/mixins */
+
 /*!********************************************!*\
-  !*** ./src/components/VCard/VCardMedia.js ***!
+  !*** ./src/components/VCard/VCardMedia.ts ***!
   \********************************************/
 
 /*! exports provided: default */
 
 /*! ../../util/helpers */
 
+/*! vue */
+
 /*!********************************************!*\
-  !*** ./src/components/VCard/VCardTitle.js ***!
+  !*** ./src/components/VCard/VCardTitle.ts ***!
   \********************************************/
 
 /*! exports provided: default */
 
+/*! vue */
+
 /*!***************************************!*\
-  !*** ./src/components/VCard/index.js ***!
+  !*** ./src/components/VCard/index.ts ***!
   \***************************************/
 
 /*! exports provided: VCard, VCardMedia, VCardTitle, VCardActions, VCardText, default */
@@ -297,6 +303,8 @@
 /*! ./VCardMedia */
 
 /*! ./VCardTitle */
+
+/*! vue */
 
 /*!***********************************************!*\
   !*** ./src/components/VCarousel/VCarousel.js ***!
@@ -741,7 +749,7 @@
 /*! ./VDivider */
 
 /*!***********************************************************!*\
-  !*** ./src/components/VExpansionPanel/VExpansionPanel.js ***!
+  !*** ./src/components/VExpansionPanel/VExpansionPanel.ts ***!
   \***********************************************************/
 
 /*! exports provided: default */
@@ -752,8 +760,10 @@
 
 /*! ../../mixins/registrable */
 
+/*! ../../util/mixins */
+
 /*!******************************************************************!*\
-  !*** ./src/components/VExpansionPanel/VExpansionPanelContent.js ***!
+  !*** ./src/components/VExpansionPanel/VExpansionPanelContent.ts ***!
   \******************************************************************/
 
 /*! exports provided: default */
@@ -770,10 +780,12 @@
 
 /*! ../VIcon */
 
+/*! ../../util/mixins */
+
 /*! ../../util/console */
 
 /*!*************************************************!*\
-  !*** ./src/components/VExpansionPanel/index.js ***!
+  !*** ./src/components/VExpansionPanel/index.ts ***!
   \*************************************************/
 
 /*! exports provided: VExpansionPanel, VExpansionPanelContent, default */
@@ -1229,7 +1241,7 @@
 /*! ./VPagination */
 
 /*!***********************************************!*\
-  !*** ./src/components/VParallax/VParallax.js ***!
+  !*** ./src/components/VParallax/VParallax.ts ***!
   \***********************************************/
 
 /*! exports provided: default */
@@ -1238,8 +1250,10 @@
 
 /*! ../../mixins/translatable */
 
+/*! ../../util/mixins */
+
 /*!*******************************************!*\
-  !*** ./src/components/VParallax/index.js ***!
+  !*** ./src/components/VParallax/index.ts ***!
   \*******************************************/
 
 /*! exports provided: VParallax, default */
@@ -1400,8 +1414,6 @@
 
 /*! ../../mixins/comparable */
 
-/*! ../../mixins/dependent */
-
 /*! ../../mixins/filterable */
 
 /*! ../../mixins/menuable */
@@ -1479,7 +1491,7 @@
 /*! ./VSlider */
 
 /*!***********************************************!*\
-  !*** ./src/components/VSnackbar/VSnackbar.js ***!
+  !*** ./src/components/VSnackbar/VSnackbar.ts ***!
   \***********************************************/
 
 /*! exports provided: default */
@@ -1492,8 +1504,10 @@
 
 /*! ../../mixins/positionable */
 
+/*! ../../util/mixins */
+
 /*!*******************************************!*\
-  !*** ./src/components/VSnackbar/index.js ***!
+  !*** ./src/components/VSnackbar/index.ts ***!
   \*******************************************/
 
 /*! exports provided: VSnackbar, default */
@@ -2397,12 +2411,14 @@
 /*! exports provided: default */
 
 /*!**********************************!*\
-  !*** ./src/mixins/rippleable.js ***!
+  !*** ./src/mixins/rippleable.ts ***!
   \**********************************/
 
 /*! exports provided: default */
 
 /*! ../directives/ripple */
+
+/*! vue */
 
 /*!********************************!*\
   !*** ./src/mixins/routable.ts ***!
@@ -2469,16 +2485,20 @@
 /*! vue */
 
 /*!************************************!*\
-  !*** ./src/mixins/translatable.js ***!
+  !*** ./src/mixins/translatable.ts ***!
   \************************************/
 
 /*! exports provided: default */
+
+/*! vue */
 
 /*!***********************************!*\
   !*** ./src/mixins/validatable.js ***!
   \***********************************/
 
 /*! exports provided: default */
+
+/*! ../util/helpers */
 
 /*! ./registrable */
 
