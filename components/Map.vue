@@ -144,6 +144,7 @@ export default {
           lat: 0,
           lng: 0
         },
+        initLocation: null,
         directionsService: '',
         directionsDisplay: '',
         legend: false,
@@ -250,8 +251,8 @@ export default {
       center () {
         if (this.place) {
           return { lat: this.place.geometry.location.lat(), lng: this.place.geometry.location.lng()}
-        } else if (this.currentLocation.lat !== 0) {
-          return this.currentLocation
+        } else if (this.initLocation) {
+          return this.initLocation
         } else {
           return {lat:-31.980293, lng:115.817935}
         }
@@ -263,6 +264,7 @@ export default {
         navigator.geolocation.getCurrentPosition(position => {
           this.currentLocation.lat = position.coords.latitude
           this.currentLocation.lng = position.coords.longitude
+          this.initLocation = JSON.parse(JSON.stringify(this.currentLocation))
         })
       },
 
