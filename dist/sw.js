@@ -12,24 +12,24 @@ workboxSW.precache([
     "revision": "596fc3822b529b11d76d6e8044ffc689"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/layouts/default.3ff7a8979a080298b694.js",
-    "revision": "4372e713ed9f4ebd5b08d95e0106bfbd"
+    "url": "/access-collective-web-app/_nuxt/layouts/default.2cd1a8d2d29c3e3dc5fa.js",
+    "revision": "9685093734c45f3486e9007008986617"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/manifest.55be7917a0f008e29c52.js",
-    "revision": "f471dff538caeaef6c4e72810236bbde"
+    "url": "/access-collective-web-app/_nuxt/manifest.213bae3a80a5640d8852.js",
+    "revision": "99afc1b8317b96da76a3cf50a72eb315"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/about.6d35bfbe477bea4f5d04.js",
-    "revision": "950e1a37dfb9ee51104da837851d2fa9"
+    "url": "/access-collective-web-app/_nuxt/pages/about.92ae317431f9d13f5df4.js",
+    "revision": "aace3b2f4f73347cfd8cfb7e9d86539c"
   },
   {
     "url": "/access-collective-web-app/_nuxt/pages/contact.0ce6670da6aa573b169a.js",
     "revision": "3d36c2e2173131dfefbfd21ba905ecfc"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/index.f9c8a6da34d985f662e6.js",
-    "revision": "25e10a0223c93039feec2dbf98ba177d"
+    "url": "/access-collective-web-app/_nuxt/pages/index.4cd52cf752b0dda2eee0.js",
+    "revision": "abd0487bb755dcc5dee2cc0389ba205a"
   },
   {
     "url": "/access-collective-web-app/_nuxt/pages/inspire.80bdca91eb007fe85211.js",
