@@ -4,7 +4,7 @@ const nodeExternals = require('webpack-node-externals')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/<repository-name>/'
+    base: '/access-collective-web-app/'
   }
 } : {}
 
@@ -54,7 +54,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
@@ -67,7 +68,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue2-google-maps'],
+    vendor: ['vue2-google-maps', 'babel-polyfill'],
     /*
     ** You can extend webpack config here
     */
