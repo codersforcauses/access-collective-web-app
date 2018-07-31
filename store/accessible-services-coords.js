@@ -271,6 +271,13 @@ module.exports = {
       }
     }],
   lift: [
+      { 
+        icon: liftIcon, 
+        position: { 
+          lat: -31.980636,  
+          lng: 115.819570 
+        } 
+      }, 
       {
         icon: liftIcon,
         position: {
@@ -1281,6 +1288,18 @@ module.exports = {
       position: {
         lat: -31.979811,
         lng: 115.820788
+      }
+    },
+    {  
+      position: { 
+      lat: -31.980892, 
+      lng: 115.818998 
+      } 
+    }, 
+    {  
+      position: { 
+      lat: -31.981138, 
+      lng: 115.819124 
       }
     }
   ]
