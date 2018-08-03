@@ -82,8 +82,14 @@
       class="legend-btn primary"
       @click="legend = !legend"
       style="margin-bottom: 100px;"
+      v-if="!legend"
     >
       Legend
+    </v-btn>
+    <v-btn :fixed="true" :bottom="true" :right="true" icon v-if="legend" @click="legend = !legend" style="margin-bottom: 100px;">
+      <v-icon color="black">
+        close
+      </v-icon>
     </v-btn>
     <div id="legend" v-show="legend"></div>
     </span>

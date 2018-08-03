@@ -38,6 +38,13 @@ $ npm run generate
 6. Make a pull request 
 
 ## Deploying app
+### Canonical method
+
+``` bash
+# Pushing from gh branch
+git subtree push --prefix dist origin gh-pages
+```
+
 ### Heroku
 https://github.com/nuxt/docs/blob/master/en/faq/heroku-deployment.md
 
