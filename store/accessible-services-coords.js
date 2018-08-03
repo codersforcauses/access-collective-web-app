@@ -2,6 +2,8 @@ let accordParkingIcon = require('~/assets/ACORD-parking.svg')
 let toiletIcon = require('~/assets/toilet-icon.png')
 let accessibleRampsIcon = require('~/assets/accessible-ramps2.svg')
 let liftIcon = require('~/assets/lift-icon.png')
+let chemistIcon = require('~/assets/chemist-icon.png')
+let guildIcon = require('~/assets/guild-icon.png')
 
 module.exports = {
   accordParking: [{ 
@@ -1291,12 +1293,14 @@ module.exports = {
       }
     },
     {  
+      icon: chemistIcon,
       position: { 
       lat: -31.980892, 
       lng: 115.818998 
       } 
     }, 
-    {  
+    { 
+      icon: guildIcon,  
       position: { 
       lat: -31.981138, 
       lng: 115.819124 

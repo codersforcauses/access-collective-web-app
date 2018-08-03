@@ -82,8 +82,14 @@
       class="legend-btn primary"
       @click="legend = !legend"
       style="margin-bottom: 100px;"
+      v-if="!legend"
     >
       Legend
+    </v-btn>
+    <v-btn :fixed="true" :bottom="true" :right="true" icon v-if="legend" @click="legend = !legend" style="margin-bottom: 100px;">
+      <v-icon color="black">
+        close
+      </v-icon>
     </v-btn>
     <div id="legend" v-show="legend"></div>
     </span>
@@ -120,6 +126,14 @@ export default {
         {
           name: 'Lift',
           icon: require('~/assets/lift-icon.png')
+        },
+        {
+          name: 'Guild Chemist',
+          icon: require('~/assets/chemist-icon.png')
+        },
+        {
+          name: 'Guild Student Assist',
+          icon: require('~/assets/guild-icon.png')
         }
       ]
       var legend = document.getElementById('legend');
