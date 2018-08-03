@@ -46,7 +46,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/vuetify',
-    { src: '~plugins/vue2-google-maps.js'}
+    { src: '~plugins/vue2-google-maps.js'},
+    { src: '~plugins/ga.js', ssr: false }
   ],
 
   /*
