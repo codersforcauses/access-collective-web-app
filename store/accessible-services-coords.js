@@ -1291,7 +1291,10 @@ module.exports = {
         lat: -31.979811,
         lng: 115.820788
       }
-    },
+    }
+  ],
+
+  misc: [
     {  
       icon: chemistIcon,
       position: { 

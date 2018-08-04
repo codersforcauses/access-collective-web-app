@@ -68,7 +68,13 @@
         />
       </gmap-cluster>
       
-
+      <gmap-cluster>
+        <GmapMarker 
+          :key="index + 'misc'" 
+          v-for="(m, index) in $store.state.accessibleServicesCoords.misc"
+          :position="m.position"
+          :icon="m.icon"/>
+      </gmap-cluster>
 
       <GmapMarker :position="currentLocation" :icon="require('~/assets/my-location.svg')"> 
       </GmapMarker>
