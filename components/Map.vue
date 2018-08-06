@@ -68,7 +68,13 @@
         />
       </gmap-cluster>
       
-
+      <gmap-cluster>
+        <GmapMarker 
+          :key="index + 'misc'" 
+          v-for="(m, index) in $store.state.accessibleServicesCoords.misc"
+          :position="m.position"
+          :icon="m.icon"/>
+      </gmap-cluster>
 
       <GmapMarker :position="currentLocation" :icon="require('~/assets/my-location.svg')"> 
       </GmapMarker>
@@ -126,6 +132,14 @@ export default {
         {
           name: 'Lift',
           icon: require('~/assets/lift-icon.png')
+        },
+        {
+          name: 'Guild Chemist',
+          icon: require('~/assets/chemist-icon.png')
+        },
+        {
+          name: 'Guild Student Assist',
+          icon: require('~/assets/guild-icon.png')
         }
       ]
       var legend = document.getElementById('legend');
