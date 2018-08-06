@@ -1,7 +1,10 @@
 <template>
 	<v-card>
-		<v-card-media :src="require('~/assets/CFC_Logo.png')" :height="logoHeight">
-		</v-card-media>
+		<v-card light>
+			<v-card-media contain :src="require('~/assets/CFC_Logo.png')" height="300">
+			</v-card-media>
+		</v-card>
+	
 
 		<v-card-title secondary-title class="mb-5">
 			<div>
