@@ -1,48 +1,55 @@
-importScripts('/access-collective-web-app/_nuxt/workbox.3de3418b.js')
+importScripts('/_nuxt/workbox.3ffff7b2.js')
 
-const workboxSW = new self.WorkboxSW({
-  "cacheId": "access-collective-web-app",
-  "clientsClaim": true,
-  "directoryIndex": "/"
-})
-
-workboxSW.precache([
+workbox.precaching.precacheAndRoute([
   {
-    "url": "/access-collective-web-app/_nuxt/app.f45d7986d9276a1064ea.js",
-    "revision": "e8542cb4a664213100492ba471d537ff"
+    "url": "/_nuxt/app.cce349942c455bcd67eb.js",
+    "revision": "2948d2534951f03b4e2f5f5f676706c8"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/layouts/default.2cd1a8d2d29c3e3dc5fa.js",
-    "revision": "9685093734c45f3486e9007008986617"
+    "url": "/_nuxt/layouts/default.62a8fc35d0d6c5c1f2e3.js",
+    "revision": "b2bd052b75d0f3418930446ef91eb4ae"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/manifest.269b3d3e2e861abbca77.js",
-    "revision": "cb85870a1227693de6d147eb21e8cc3c"
+    "url": "/_nuxt/manifest.59f7bf99362a958a5ffd.js",
+    "revision": "4abc2fd29f78103cb8b40944b0e62863"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/about.c0c50bff693b20b3cfe1.js",
-    "revision": "4888d91e15daf1d79d83c518041cf72b"
+    "url": "/_nuxt/pages/about.4f63c4f48d4c28f51990.js",
+    "revision": "d69e2e665eea9cacbc0f88090e56fbf0"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/contact.ffadfc597e04f85dbc25.js",
+    "url": "/_nuxt/pages/contact.ffadfc597e04f85dbc25.js",
     "revision": "e2503f1d41523964fd87202f3955143c"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/index.0a637b07bc042d1b8fb3.js",
+    "url": "/_nuxt/pages/index.0a637b07bc042d1b8fb3.js",
     "revision": "209cf72670a546c36eedf784d88e3cb5"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/inspire.175b1266f149939e162b.js",
+    "url": "/_nuxt/pages/inspire.175b1266f149939e162b.js",
     "revision": "b1efd14dce2ab06143bd4d53bdc80fc1"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/vendor.7c74467f748fc6e4a213.js",
-    "revision": "a64c35ac7844af09e35f6df72d3c8f89"
+    "url": "/_nuxt/vendor.d534a236fd59e437279b.js",
+    "revision": "a6c749bfd1ee3c60989ae5ebd0e3e222"
   }
-])
+], {
+  "cacheId": "access-collective-web-app",
+  "directoryIndex": "/",
+  "cleanUrls": false
+})
 
 
-workboxSW.router.registerRoute(new RegExp('/access-collective-web-app/_nuxt/.*'), workboxSW.strategies.cacheFirst({}), 'GET')
 
-workboxSW.router.registerRoute(new RegExp('/access-collective-web-app/.*'), workboxSW.strategies.networkFirst({}), 'GET')
+workbox.clientsClaim()
+workbox.skipWaiting()
+
+
+workbox.routing.registerRoute(new RegExp('/_nuxt/.*'), workbox.strategies.cacheFirst({}), 'GET')
+
+workbox.routing.registerRoute(new RegExp('/.*'), workbox.strategies.networkFirst({}), 'GET')
+
+
+
+
 
