@@ -3,7 +3,7 @@
     <v-toolbar flat color="primary">
       <v-btn icon>
         <v-avatar>
-          <img src="access_logo.jpg" alt="Access Logo">
+          <img :src="require('~/assets/access_logo.png')" alt="Access Logo">
         </v-avatar>
       </v-btn>
    
