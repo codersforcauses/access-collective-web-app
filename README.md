@@ -39,11 +39,9 @@ $ npm run generate
 
 ## Deploying app
 ### Canonical method
-
-``` bash
-# Pushing from gh branch
-git subtree push --prefix dist origin gh-pages
-```
+`./deploy.sh`
+If you get permission denied error
+`chmod 755 deploy.sh`
 
 ### Heroku
 https://github.com/nuxt/docs/blob/master/en/faq/heroku-deployment.md
