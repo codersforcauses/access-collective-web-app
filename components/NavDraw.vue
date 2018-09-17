@@ -1,13 +1,12 @@
 <template>
   <v-navigation-drawer :mini-variant.sync="mini" v-model='$store.state.navDraw' fixed app class="secondary">
-     <v-toolbar flat color="primary">
-      <v-list>
-        <v-list-tile>
-          <v-list-tile-title class="title">
-            Application
-          </v-list-tile-title>
-        </v-list-tile>
-      </v-list>
+    <v-toolbar flat color="primary">
+      <v-btn icon>
+        <v-avatar>
+          <img src="/access_logo.jpg" alt="Access Logo">
+        </v-avatar>
+      </v-btn>
+   
     </v-toolbar>
 
     <v-divider></v-divider>
