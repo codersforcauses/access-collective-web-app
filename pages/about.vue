@@ -7,14 +7,14 @@
             <v-layout row wrap>
               <v-flex d-flex xs6>
                 <v-card flat>
-                  <v-img src="/CFC_Logo.png">
+                  <v-img src="CFC_Logo.png">
                   </v-img>
                 </v-card>
               </v-flex>
 
               <v-flex d-flex xs6>
                 <v-card flat>
-                  <v-img src="/access_logo.jpg">
+                  <v-img src="access_logo.jpg">
 
                   </v-img>
                 </v-card>
