@@ -21,7 +21,7 @@
 
     <gmap-map ref="mapRef" :center="center" :zoom="19" style="width: 100%; height: 100%;" :options="{styles: styles}">
 
-      <gmap-cluster>
+      <gmap-cluster :minimumClusterSize="3">
         <GmapMarker 
           :key="index + 'parking'" 
           v-for="(m, index) in $store.state.accessibleServicesCoords.accordParking" 
@@ -33,7 +33,7 @@
       </gmap-cluster>
 
 
-      <gmap-cluster>
+      <gmap-cluster :minimumClusterSize="3">
         <GmapMarker 
           :key="index + 'lift'" 
           v-for="(m, index) in $store.state.accessibleServicesCoords.lift" 
@@ -45,7 +45,7 @@
       </gmap-cluster>
       
 
-      <gmap-cluster>
+      <gmap-cluster :minimumClusterSize="3">
         <GmapMarker 
           :key="index + 'ramps'" 
           v-for="(m, index) in $store.state.accessibleServicesCoords.ramps" 
@@ -57,7 +57,7 @@
       </gmap-cluster>
      
 
-      <gmap-cluster>
+      <gmap-cluster :minimumClusterSize="3">
         <GmapMarker 
           :key="index + 'toilets'" 
           v-for="(m, index) in $store.state.accessibleServicesCoords.toilets" 
@@ -68,7 +68,7 @@
         />
       </gmap-cluster>
       
-      <gmap-cluster>
+      <gmap-cluster :minimumClusterSize="3">
         <GmapMarker 
           :key="index + 'misc'" 
           v-for="(m, index) in $store.state.accessibleServicesCoords.misc"

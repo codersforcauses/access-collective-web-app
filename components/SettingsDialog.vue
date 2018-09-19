@@ -10,30 +10,30 @@
             </v-card-title>
 
             <v-card-text>
-                <v-switch
-                    label="According Parking"
+                <v-checkbox
+                    label="Accessible Parking"
                     v-model="$store.state.accessibleMarkers.accordParking"
                     color="pink"
                 >
-                </v-switch>
-                <v-switch
+                </v-checkbox>
+                <v-checkbox
                     label="Accessible Ramps"
                     v-model="$store.state.accessibleMarkers.ramps"
                     color="pink"            
                 >
-                </v-switch>
-                <v-switch
+                </v-checkbox>
+                <v-checkbox
                     label="Lifts"
                     v-model="$store.state.accessibleMarkers.lift"       
                     color="pink"        
                 >
-                </v-switch>
-                <v-switch
+                </v-checkbox>
+                <v-checkbox
                     label="Universial Access Toilets"
                     v-model="$store.state.accessibleMarkers.toilets"        
                     color="pink"       
                 >
-                </v-switch>
+                </v-checkbox>
             </v-card-text>
         
             <v-divider></v-divider>
