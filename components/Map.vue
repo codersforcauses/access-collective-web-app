@@ -5,6 +5,7 @@
         @place_changed="setPlace"
         :bounds="{north: -31.969972, east: 115.821395, south: -31.993956, west: 115.807834}"
         id="map-search"
+        selectFirstOnEnter
       >
 		  </gmap-autocomplete>
 			<v-spacer></v-spacer>
