@@ -1,9 +1,3 @@
-/*!
- * Vue.js v2.5.17
- * (c) 2014-2018 Evan You
- * Released under the MIT License.
- */
-
 /*!*****************************************!*\
   !*** ./src/components/VAlert/VAlert.ts ***!
   \*****************************************/
@@ -311,7 +305,7 @@
 /*! vue */
 
 /*!***********************************************!*\
-  !*** ./src/components/VCarousel/VCarousel.js ***!
+  !*** ./src/components/VCarousel/VCarousel.ts ***!
   \***********************************************/
 
 /*! exports provided: default */
@@ -328,8 +322,10 @@
 
 /*! ../../directives/touch */
 
+/*! ../../util/mixins */
+
 /*!***************************************************!*\
-  !*** ./src/components/VCarousel/VCarouselItem.js ***!
+  !*** ./src/components/VCarousel/VCarouselItem.ts ***!
   \***************************************************/
 
 /*! exports provided: default */
@@ -338,8 +334,10 @@
 
 /*! ../../mixins/registrable */
 
+/*! ../../util/mixins */
+
 /*!*******************************************!*\
-  !*** ./src/components/VCarousel/index.js ***!
+  !*** ./src/components/VCarousel/index.ts ***!
   \*******************************************/
 
 /*! exports provided: VCarousel, VCarouselItem, default */
@@ -1229,6 +1227,8 @@
 /*! ../../stylus/components/_navigation-drawer.styl */
 
 /*! ../../mixins/applicationable */
+
+/*! ../../mixins/dependent */
 
 /*! ../../mixins/overlayable */
 
@@ -2151,7 +2151,7 @@
 /*! ../../../util/easing-patterns */
 
 /*!*********************************!*\
-  !*** ./src/components/index.js ***!
+  !*** ./src/components/index.ts ***!
   \*********************************/
 
 /*! exports provided: VApp, VAlert, VAutocomplete, VAvatar, VBadge, VBottomNav, VBottomSheet, VBreadcrumbs, VBtn, VBtnToggle, VCard, VCarousel, VCheckbox, VChip, VCombobox, VCounter, VDataIterator, VDataTable, VDatePicker, VDialog, VDivider, VExpansionPanel, VFooter, VForm, VGrid, VHover, VIcon, VImg, VInput, VJumbotron, VLabel, VList, VMenu, VMessages, VNavigationDrawer, VOverflowBtn, VPagination, VParallax, VPicker, VProgressCircular, VProgressLinear, VRadioGroup, VRangeSlider, VRating, VResponsive, VSelect, VSlider, VSnackbar, VSpeedDial, VStepper, VSubheader, VSwitch, VSystemBar, VTabs, VTextarea, VTextField, VTimePicker, VToolbar, VTooltip, Transitions */
@@ -2441,10 +2441,12 @@
 /*! vue */
 
 /*!*********************************!*\
-  !*** ./src/mixins/dependent.js ***!
+  !*** ./src/mixins/dependent.ts ***!
   \*********************************/
 
 /*! exports provided: default */
+
+/*! ../util/mixins */
 
 /*!**********************************!*\
   !*** ./src/mixins/detachable.js ***!
@@ -2457,10 +2459,12 @@
 /*! ../util/console */
 
 /*!**********************************!*\
-  !*** ./src/mixins/filterable.js ***!
+  !*** ./src/mixins/filterable.ts ***!
   \**********************************/
 
 /*! exports provided: default */
+
+/*! vue */
 
 /*!********************************!*\
   !*** ./src/mixins/loadable.ts ***!
@@ -2499,8 +2503,6 @@
 /*! ./positionable */
 
 /*! ./stackable */
-
-/*! ./themeable */
 
 /*!***********************************!*\
   !*** ./src/mixins/overlayable.js ***!
@@ -2551,10 +2553,12 @@
 /*! ../util/console */
 
 /*!**********************************!*\
-  !*** ./src/mixins/returnable.js ***!
+  !*** ./src/mixins/returnable.ts ***!
   \**********************************/
 
 /*! exports provided: default */
+
+/*! vue */
 
 /*!**********************************!*\
   !*** ./src/mixins/rippleable.ts ***!
@@ -3151,6 +3155,12 @@
   \******************************************************************************/
 
 /*! no static exports found */
+
+/*!
+ * Vue.js v2.5.17
+ * (c) 2014-2018 Evan You
+ * Released under the MIT License.
+ */
 
 /**
  * vuex v3.0.1
