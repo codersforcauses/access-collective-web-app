@@ -4,15 +4,15 @@ importScripts('/access-collective-web-app/_nuxt/workbox.5c678697.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/access-collective-web-app/_nuxt/app.e0993f73f402acb0b6da.js",
-    "revision": "9644fdc89c950c6387bf1a468e0d1b54"
+    "url": "/access-collective-web-app/_nuxt/app.ffb6c5b7949a3db1bfe5.js",
+    "revision": "2fb281b47928b918c9316bd74c0d4613"
   },
   {
     "url": "/access-collective-web-app/_nuxt/layouts/default.29e1fe2c7e398bb038f7.js",
     "revision": "5a4433e19b8d456e64602af8d4b337f1"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/manifest.7b35f290f547eace412a.js",
+    "url": "/access-collective-web-app/_nuxt/manifest.5d616a59174040d79cb3.js",
     "revision": "89a8f71e5c596a4832afc78e334e0782"
   },
   {
