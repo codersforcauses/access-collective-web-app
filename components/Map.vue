@@ -118,7 +118,7 @@ export default {
 
       const icons = [
         {
-          name: 'ACORD Parking',
+          name: 'Accessible Parking',
           icon: require('~/assets/ACORD-parking.svg')
         },
         {
