@@ -18,7 +18,8 @@ const createStore = () => {
         alert: false,
         type: 'info',
         message: null
-      }
+      },
+      monochrome:null
     },
 
     getters: {
@@ -46,6 +47,14 @@ const createStore = () => {
 
       hideAlert(state) {
         state.alert.alert = false
+      },
+
+      makeMonochromeTrue(state) {
+        state.monochrome = true
+      },
+
+      makeMonochromeFalse(state) {
+        state.monochrome = false
       }
     }
   })

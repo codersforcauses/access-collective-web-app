@@ -29,6 +29,8 @@ export default {
     if (this.isIE()) this.$store.commit('showAlert', {type: 'error', message: 'Sorry IE browser is not supported please use a more recent browser: Chrome, Firefox, Edge, Safari'})
 
     this.addDriftMessaging()
+
+    localStorage.getItem('monochrome') ? this.$store.commit('makeMonochromeTrue') : this.$store.commit('makeMonochromeFalse')
   },
   data() {
     return {
