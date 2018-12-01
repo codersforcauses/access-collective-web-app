@@ -1,5 +1,6 @@
 <template>
 <span>
+  <span @click="legend = false">
     <v-toolbar dense class='search-bar' :color="primary">
 		  <gmap-autocomplete 
         @place_changed="setPlace"
@@ -83,6 +84,8 @@
 
       <GmapMarker  v-if="place" :position="{lat: place.geometry.location.lat(), lng: place.geometry.location.lng()}" :animation="google.maps.Animation.DROP"/>
     </gmap-map>
+    </span>
+    
     <v-btn
       :fixed="true"
       :bottom="true"
