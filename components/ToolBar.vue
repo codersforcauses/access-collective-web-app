@@ -1,15 +1,18 @@
 <template>
-  <v-toolbar fixed app color="primary">
+  <v-toolbar fixed app :color="primary">
     <v-toolbar-side-icon @click="$store.commit('changeNavDraw')"></v-toolbar-side-icon>
     <v-toolbar-title>Disability Services UWA</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn icon>
-      <v-switch color="secondary" v-model="monochrome">
+      <v-switch :color="secondary" v-model="monochrome">
 
       </v-switch>
     </v-btn>
 
-    <v-btn color="primary">
+    <v-btn 
+      :color="primary"
+      @click="$store.commit('showHowToDialog')"
+    >
       How To
     </v-btn>
   </v-toolbar>
@@ -24,6 +27,16 @@
     data () {
       return {
         monochrome: false
+      }
+    },
+
+    computed: {
+      primary () {
+        return this.$store.state.monochrome ? 'black' : 'primary'
+      },
+
+      secondary () {
+        return this.$store.state.monochrome ? 'white' : 'secondary'
       }
     },
 

@@ -1,6 +1,6 @@
 <template>
-  <v-navigation-drawer :mini-variant.sync="mini" v-model='$store.state.navDraw' fixed app class="secondary">
-    <v-toolbar flat color="primary">
+  <v-navigation-drawer :mini-variant.sync="mini" v-model='$store.state.navDraw' fixed app :class="navColor">
+    <v-toolbar flat :color="drawColor">
       <v-btn icon>
         <v-avatar>
           <img :src="require('~/assets/access_logo.jpg')" alt="Access Logo">
@@ -69,6 +69,14 @@
     computed: {
       mini () {
         return this.$vuetify.breakpoint.name === 'xs'
+      },
+
+      navColor () {
+        return this.$store.state.monochrome ? 'black' : 'secondary'
+      },
+
+      drawColor () {
+        return this.$store.state.monochrome ? 'black' : 'primary'
       }
     }
   }

@@ -1,10 +1,11 @@
 <template>
 <span>
-    <v-toolbar dense class='search-bar' color="primary">
+    <v-toolbar dense class='search-bar' :color="primary">
 		  <gmap-autocomplete 
         @place_changed="setPlace"
         :bounds="{north: -31.969972, east: 115.821395, south: -31.993956, west: 115.807834}"
         id="map-search"
+        :class="$store.state.monochrome ? 'white-placeholder' : 'colored-placeholder'"
         selectFirstOnEnter
       >
 		  </gmap-autocomplete>
@@ -86,7 +87,8 @@
       :fixed="true"
       :bottom="true"
       :right="true"
-      class="legend-btn primary"
+      class="legend-btn"
+      :color="primary"
       @click="legend = !legend"
       style="margin-bottom: 100px;"
       v-if="!legend"
@@ -277,6 +279,14 @@ export default {
         } else {
           return {lat:-31.980293, lng:115.817935}
         }
+      },
+
+      primary () {
+        return this.$store.state.monochrome ? 'black' : 'primary'
+      },
+
+      secondary () {
+        return this.$store.state.monochrome ? 'white' : 'secondary'
       }
     },
 
@@ -351,17 +361,31 @@ export default {
   width: 100%
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.colored-placeholder::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: pink;
 }
-::-moz-placeholder { /* Firefox 19+ */
+.colored-placeholder::-moz-placeholder { /* Firefox 19+ */
   color: pink;
 }
-:-ms-input-placeholder { /* IE 10+ */
+.colored-placeholder:-ms-input-placeholder { /* IE 10+ */
   color: pink;
 }
-:-moz-placeholder { /* Firefox 18- */
+.colored-placeholder:-moz-placeholder { /* Firefox 18- */
   color: pink;
+}
+
+.white-placeholder::-webkit-input-placeholder {
+  color: white;
+}
+
+.white-placeholder::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+.white-placeholder:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+.white-placeholder:-moz-placeholder { /* Firefox 18- */
+  color: white;
 }
 
 input:focus{

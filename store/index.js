@@ -6,6 +6,7 @@ const createStore = () => {
     state: {
       navDraw: false,
       settingsDialog: false,
+      howToDialog: false,
       accessibleMarkers: {
         accordParking: true,
         lift: true,
@@ -55,6 +56,14 @@ const createStore = () => {
 
       makeMonochromeFalse(state) {
         state.monochrome = false
+      },
+
+      showHowToDialog(state) {
+        state.howToDialog = true
+      },
+
+      closeHowToDialog(state) {
+        state.howToDialog = false
       }
     }
   })
