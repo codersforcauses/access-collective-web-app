@@ -12,8 +12,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "e9f27b2046259db5da0cc8e08ad0a2da"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/manifest.57bf9f2123cd73a443e5.js",
-    "revision": "4b726ffb7c74bdd16e020a41dd280ade"
+    "url": "/access-collective-web-app/_nuxt/manifest.be5d7c238669acc6c3f3.js",
+    "revision": "e5368eb78353c798b2b2b6aee11c9967"
   },
   {
     "url": "/access-collective-web-app/_nuxt/pages/about.ad5444389e6feed01acd.js",
@@ -24,8 +24,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "e2503f1d41523964fd87202f3955143c"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/index.5ed60ac083fe1605cf26.js",
-    "revision": "c246c27d9cdf41186543f25cee9c1965"
+    "url": "/access-collective-web-app/_nuxt/pages/index.08368058744e90c363b1.js",
+    "revision": "cc64688aefd7f34f24edbc5d7133a17a"
   },
   {
     "url": "/access-collective-web-app/_nuxt/pages/inspire.175b1266f149939e162b.js",
