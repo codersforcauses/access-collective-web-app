@@ -4,36 +4,32 @@ importScripts('/access-collective-web-app/_nuxt/workbox.5c678697.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/access-collective-web-app/_nuxt/app.8e512cbf3234531562f7.js",
-    "revision": "c90fadd64dcb1136e3846027ef9bb34e"
+    "url": "/access-collective-web-app/_nuxt/app.eac6dff3f9c7a106994e.js",
+    "revision": "0eb3157b62a0dff5acc1ed050af703f6"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/layouts/default.8199406b36c69eb25714.js",
-    "revision": "e9f27b2046259db5da0cc8e08ad0a2da"
+    "url": "/access-collective-web-app/_nuxt/layouts/default.01bfd53feb5c5db0f6f4.js",
+    "revision": "5bb08936febb9e8e22d5ea0cb0095a25"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/manifest.be5d7c238669acc6c3f3.js",
-    "revision": "e5368eb78353c798b2b2b6aee11c9967"
+    "url": "/access-collective-web-app/_nuxt/manifest.9827727414b887935655.js",
+    "revision": "8c8805387fa96f32899497cc79a17e87"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/about.ad5444389e6feed01acd.js",
-    "revision": "ae4f0e4f14a041d4ccc586445a2a0a72"
+    "url": "/access-collective-web-app/_nuxt/pages/about.ff7dd1c10e9f9fc063a1.js",
+    "revision": "556c9ac0d69da875e72c871c6da0345f"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/pages/contact.ffadfc597e04f85dbc25.js",
-    "revision": "e2503f1d41523964fd87202f3955143c"
-  },
-  {
-    "url": "/access-collective-web-app/_nuxt/pages/index.08368058744e90c363b1.js",
-    "revision": "cc64688aefd7f34f24edbc5d7133a17a"
+    "url": "/access-collective-web-app/_nuxt/pages/index.7140e0ad53b72411173a.js",
+    "revision": "74bfc277a3519d9c1ae559f7c03962bc"
   },
   {
     "url": "/access-collective-web-app/_nuxt/pages/inspire.175b1266f149939e162b.js",
     "revision": "b1efd14dce2ab06143bd4d53bdc80fc1"
   },
   {
-    "url": "/access-collective-web-app/_nuxt/vendor.fbf3d5e1f84ac53e5fee.js",
-    "revision": "07faa83324d86631e000309b2a5a8f0f"
+    "url": "/access-collective-web-app/_nuxt/vendor.894f2b457d41a6d39e6a.js",
+    "revision": "d938a57e1b56437eaab0f7224ab3af8e"
   }
 ], {
   "cacheId": "access-collective-web-app",
